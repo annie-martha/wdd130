@@ -3,73 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/how.css">
     <title>Join the Army</title>
 </head>
 <body>
     <header>
-        <img src="" alt="">
+        <div>
+        <img src="../logo.png" alt="logo">
+        </div>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="aboutus.html">About us</a>
+            <a class="one" href="howjoin.html">Join us</a>
+            <a class="two" href="aboutus.html">About us</a>
+            <a class="two" href="index.html">Home</a>
         </nav>
     </header>
 
     <main>
-    <section>
+    <section class="topimage">
         <div>Do you want to know if you qualify?</div>
         <img src="../linedup.jpg" alt="soldiers lined up">
     </section>
 
-    <details>
-        <summary>What are the requirements to join?</summary>
-        Legal US citizen (we can make acceptations), Against Ernest Freeman, Believes in natural rights and the second amendment </br>
-    </details>
+    <div id="othermain">
+</div>
+<div id="qna">
+<button class="accordion">What are the requirements to join?</button>
+<div class="panel">
+        <p>Legal US citizen (we can make acceptations), Against Ernest Freeman, Believes in natural rights and the second amendment </p>
+    </div>
 
-    <details>
-        <summary>Can I join if I'm international?</summary>
-        We are in countries like Canada, Mexico, and even the United Kingdom. If you are international and can’t afford a flight to the US, we will be willing to pay for your flight, no questions asked.
-    </details>
+<button class="accordion">Can I join if I'm international?</button>
+<div class="panel">
+        <p>We are in countries like Canada, Mexico, and even the United Kingdom. If you are international and can’t afford a flight to the US, we will be willing to pay for your flight, no questions asked.</p>
+</div>
 
-    <details>
-        <summary>Do I need prior military experience?</summary>
-        No
-    </details>
+<button class="accordion">Do I need prior military experience?</button>
+<div class="panel">
+        <p>No</p>
+</div>
 
-    <details>
-        <summary>How can I donate to you?</summary>
-        Ask a local recruiter in your state or send us an email. We only accept cash and cryptocurrency through Trust Bank.
-    </details>
 
-    <details>
-        <summary>Is this legal?</summary>
-        yes.
-    </details>
+<button class="accordion">How can I donate to you?</button>
+<div class="panel">
+       <p>Ask a local recruiter in your state or send us an email. We only accept cash and cryptocurrency through Trust Bank. </p>
+</div>
 
-    <details>
-        <summary>Do you support terrorism?</summary>
-        we do not condone any illegal activities or support threats of anything of the sort, we are here to fight against it. Anybody claiming to be an ADF fighter, while engaging in acts like terrorism, murder, extortion, etc is lying or has been sent to the proper authorities to be dealt with.
-    </details>
+<button class="accordion">Is this legal?</button>
+<div class="panel">
+        <p>Yes</p>
+</div>
 
-    <details>
-        <summary>Can women join?</summary>
-        Yes.
-    </details>
+<button class="accordion">Do you support terrorism?</button>
+<div class="panel">
+    <p>we do not condone any illegal activities or support threats of anything of the sort, we are here to fight against it. Anybody claiming to be an ADF fighter, while engaging in acts like terrorism, murder, extortion, etc is lying or has been sent to the proper authorities to be dealt with.</p>
+</div>
 
-    <details>
-        <summary>Are you affiliated with Fyrd</summary>
-        No. They were never apart of us, and never will be.
-    </details>
+<button class="accordion">Can women join?</button>
+<div class="panel">
+        <p>Yes</p>
+</div>
 
-    <form>
+<button class="accordion">Are you affiliated with Fyrd</button>
+<div class="panel">
+       <p>No. They were never apart of us, and never will be.</p>
+</div>
+</div>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+<div class="othermain2">
+    <form id="email">
+            <div class="top">
         <input type="text" name="full name" placeholder="Full name">
-        <input type="text" name="email" placeholder="Email adress">
-        <input type="text" name="message" placeholder="Enter your message">
+        <input type="text" name="email" placeholder="Email adress"> 
+            </div>
+            <div class="middle">
+        <input class="message" type="text" name="message" placeholder="Enter your message">
         <img src="../gmail.webp" alt="gmail logo">
-        <div>
-            <p1>review our list of requirements</p1>
+            </div>
+        <div class="bottom">
+            <p1 class="bigger">review our requirements</p1>
             <p>Send us an email and we will review it. In your email include your full name, social security number, phone number, current address, and drivers license. Regardless of whether you are a college student, blue collar worker, white collar worker, unemployed, or a veteran, we need you.</p>
         </div>
     </form>
+</div>
     </main>
 
     <footer>
